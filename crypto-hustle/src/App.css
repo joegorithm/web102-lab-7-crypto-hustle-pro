@@ -91,3 +91,118 @@ li.main-list {
   background-color: rgb(39, 39, 39);
   border-radius: 8px;
 }
+
+
+nav {
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 1000;
+  background: #1d1f1d;
+  margin: 20px 30px;
+  padding: 12px 24px;
+  border-radius: 8px;
+  display: flex;
+  gap: 18px;
+  align-items: center;
+}
+
+/* CoinDetail styles */
+.coin-detail {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* padding: 40px 48px; */
+  /* max-width: 980px; */
+  color: #f5f5f5;
+  box-sizing: border-box;
+}
+
+.coin-header {
+  margin-bottom: 16px;
+}
+
+.images {
+  width: 96px;
+  height: 96px;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.6);
+  border: 2px solid rgba(255,255,255,0.06);
+}
+
+.coin-title {
+  font-size: 2.2rem;
+  margin: 0 0 12px 0;
+  text-align: center;
+}
+
+.coin-meta {
+  max-width: 740px;
+  text-align: left;
+}
+
+.coin-description {
+  color: #dcdcdc;
+  line-height: 1.6;
+  margin-top: 4px;
+}
+
+.coin-algo {
+  margin-top: 10px;
+  color: #aeb6c2;
+  font-weight: 600;
+}
+
+/* table */
+.coin-stats-table {
+  width: 100%;
+  max-width: 980px;
+  margin: 1.25rem auto;
+  border-collapse: collapse;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.7);
+}
+
+.coin-stats-table th,
+.coin-stats-table td {
+  padding: 12px 18px;
+  text-align: left;
+  vertical-align: middle;
+}
+
+.coin-stats-table th {
+  background: linear-gradient(180deg,#2a2a2a,#222);
+  color: #fff;
+  font-weight: 600;
+  width: 40%;
+}
+
+.coin-stats-table td {
+  background: #111;
+  color: #e8e8e8;
+  border-top: 1px solid rgba(255,255,255,0.03);
+}
+
+.coin-stats-table tr:nth-child(even) td {
+  background: #0f0f0f;
+}
+
+.coin-stats-table td a {
+  color: #8ab4ff;
+  text-decoration: underline;
+}
+
+.positive { color: #4ade80; font-weight: 700; }
+.negative { color: #ff6b6b; font-weight: 700; }
+
+@media (max-width: 900px) {
+  .coin-detail { margin-left: 26%; padding: 28px; }
+}
+
+@media (max-width: 640px) {
+  .coin-detail,
+  .coin-stats-table { margin-left: 0; padding: 16px; width: 100%; }
+  .sidenav { display: none; }
+}
